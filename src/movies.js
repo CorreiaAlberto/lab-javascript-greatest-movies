@@ -41,13 +41,13 @@ function orderAlphabetically(peliculas) {
 
     function comparador(a, b) {
         if (a.title < b.title) {
-            return 1
-        } else if (a.title > b.title) {
             return -1
+        } else if (a.title > b.title) {
+            return 1
         }
         return 0
     }
-    let final20 = orderedMovies.sort(comparador).slice(0, 20)
+    let final20 = orderedMovies.sort(comparador).map(movie => movie.title).slice(0, 20)
     return final20
 }
 // Iteration 4: All rates average - Get the average of all rates with 2 decimals
